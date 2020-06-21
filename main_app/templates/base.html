@@ -7,18 +7,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cooking with BAM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0629772919.js" crossorigin="anonymous"></script>
+  
+  {% comment %} initialize {% endcomment %}
+  <script>
+  
+  //Sidenav
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    })
+  //slider images
+   $(document).ready(function(){
+    $('.slider').slider();
+  });
+        
+//auto complete 
+ $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Pasta": null,
+        "Risoto": null,
+        "Chicken Grill": 'https://placehold.it/250x250'
+      },
+    });
+  });
+        
+  
+  </script>
+
+
+
+
+
 </head>
-<body>
-  <header class="navbar-fixed">
-    <nav>
+<body id="home" class="scrollspy">
+  <header>
+  {% comment %} <div class="navbar-fixed"> {% endcomment %}
+    <nav class="grey darken-1" style="padding:0px 10px;">
       <div class="nav-wrapper">
         <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Cooking with BAM</a></li>
+          <li><a href="/" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          </li>
+          <li><a href="/" class="brand-logo">&nbsp;&nbsp;Cooking with BAM</a></li>
         </ul>
-        <ul class="right">
+        <ul class="right hide-on-med-and-down">
             <li><a href="/search/">Recipe Search</a></li>
             <li><a href="/recipes/">My Cookbook</a></li>
             <li><a href="/profile/">Profile</a></li>
@@ -27,13 +66,25 @@
         </ul>
       </div>
     </nav>
+
+
+<ul class="sidenav" id="mobile-nav">
+            <li><a href="/search/">Recipe Search</a></li>
+            <li><a href="/recipes/">My Cookbook</a></li>
+            <li><a href="/profile/">Profile</a></li>
+            <li><a href="">Sign Up</a></li>
+            <li><a href="">Log In</a></li>
+</ul>
+
+
+
   </header>
   <main class="container">
     {% block content %}
     {% endblock %}
   </main>
   <footer class="page-footer">
-    <div class="right">All Rights Reserved, &copy; 2020 Cooking with BAM &nbsp;</div>
+    <div  class= "grey darken-3" "right"  style="padding:0px 10px;">All Rights Reserved, &copy; 2020 Cooking with BAM &nbsp;</div>
   </footer>
 </body>
 </html>
