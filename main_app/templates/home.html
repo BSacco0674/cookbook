@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" > <!-- random image -->
+        <div class="caption center-align">
+          <h3>Welcome to BAM!</h3>
+          <h5 class="light grey-text text-lighten-3">A family cookbook over a 100 recipes</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+{% comment %} Search area {% endcomment %}
+<section id="search" class="section section-search black white-text 
+center scrollspy">
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h4>Search for Recipes </h4>
+            <div class="input-field">
+                <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Find the most delicious recipe here!">
+                <input class="btn btn-default" type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+<br>
+{% comment %} section favorite food {% endcomment %}
+
+<section class="section section-popular scrollspy" id="popular">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m4">
+					<div class="card">
+						<div class="card-image">
+							<img src="https://images.pexels.com/photos/1256875/pexels-photo-1256875.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"> <span class="card-tittle">Pasta al Pesto</span>
+						</div>
+						<div class="card content"></div>Lorem ipsum dolor sit amet.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}
