@@ -9,8 +9,8 @@ def home(request):
 def recipes(request):
     return render(request, 'recipes/index.html')
 
-def search(request):
-    return render(request, 'search.html')
+def search_results(request):
+    return render(request, 'results.html')
 
 def profile(request):
     return render(request, 'profile.html')
