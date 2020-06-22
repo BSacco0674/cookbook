@@ -12,3 +12,20 @@ body {
     padding-top: 0;
     text-align: right;
   }
+
+  .section-search input {
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 50% center !important;
+    border: #f4f4f4 3px solid !important;
+  }
+
+
+
+  .slides {
+    
+    indicators: false,
+    height: 500,
+    transition:500,
+    interval: 6000
+  }
