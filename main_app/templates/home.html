@@ -56,20 +56,73 @@ center scrollspy">
 <br>
 {% comment %} section favorite food {% endcomment %}
 
-<section class="section section-popular scrollspy" id="popular">
-		<div class="container">
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="https://images.pexels.com/photos/1256875/pexels-photo-1256875.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"> <span class="card-tittle">Pasta al Pesto</span>
-						</div>
-						<div class="card content"></div>Lorem ipsum dolor sit amet.
-					</div>
-				</div>
+<section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          <span class="teal-text">Favorite</span> Food</h4>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.pexels.com/photos/1256875/pexels-photo-1256875.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="">
+              <span class="card-title">Pasta al Pesto</span>
+            </div>
+            <div class="card-content">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="">
+              <span class="card-title">Roasted Chicken</span>
+            </div>
+            <div class="card-content">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.pexels.com/photos/248509/pexels-photo-248509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+              <span class="card-title">Cauliflower Rice </span>
+            </div>
+            <div class="card-content">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center">
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  {% comment %} follow us info {% endcomment %}
+<section class="section section-follow grey darken-2 white-text center">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h4>Follow BAM</h4>
+				<p>Follow us on social media for new recipes!</p>
+        <a href="https://www.facebook.com/profile.php?id=100052946640434&sk=timeline#_" class="white-text">
+        <i class="fab fa-facebook fa-4x"></i>
+        </a>
+        <a href="https://www.instagram.com/" class="white-text">
+        <i class="fa fa-instagram fa-4x"></i>
+        </a>
 			</div>
 		</div>
-	</section>
-
-
+	</div>
+</section>
 {% endblock %}
