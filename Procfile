@@ -1,1 +1,1 @@
-web: gunicorn cooking-with-bam.wsgi
+web: gunicorn cookbook.wsgi
