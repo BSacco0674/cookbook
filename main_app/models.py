@@ -7,7 +7,26 @@ class Recipe(models.Model):
     ingredients = models.TextField(max_length=250)
     instructions = models.TextField(max_length=900)
 
-class Reviews(models.Model):
+    def __str__(self):
+        return self.name
+    
+  # Add this method
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'recipe_id': self.id})
+
+class Review(models.Model):
     rating = models.IntegerField()
     comment = models.TextField(max_length=250)
-    modifications = models.TextField(max_length=250)
+
+    review = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.comment}"
+
+class Modification(models.Model):
+    content = models.TextField(max_length=250)
+
+    modification = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.content}"
