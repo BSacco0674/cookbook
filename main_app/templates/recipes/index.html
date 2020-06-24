@@ -2,16 +2,75 @@
 
 {% block content %}
 
-<h1>Recipe List</h1>
+<html class="index-bg">
+
+
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://images.pexels.com/photos/271458/pexels-photo-271458.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" > <!-- random image -->
+        <div class="caption center-align">
+          <h2>Select your recipe! </h2>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/2168783/pexels-photo-2168783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> <!-- random image -->
+        <div class="caption justified-align">
+          <h3>And be the boss o the house</h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+    
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
 {% for recipe in recipes %}
   <div class="card">
     <a href="{% url 'detail' recipe.id %}">
-        <div class="card-content">
+        <div class="card-content #b2ebf2 cyan lighten-4">
         <span class="card-title">{{ recipe.name }}</span>
         </div>
     </a>
   </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
+<script>
+
+var options = {
+  bottom: '350px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '10px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: "#fff url('https://images.pexels.com/photos/1415734/pexels-photo-1415734.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') ",  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: "#fff", // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+
+</script>
+
+
 {% endfor %}
 
 {% endblock %}
