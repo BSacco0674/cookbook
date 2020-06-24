@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -68,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cooking-with-bam.wsgi.application'
+WSGI_APPLICATION = 'cookbook.wsgi.application'
 
 
 # Database
@@ -127,5 +128,4 @@ LOGOUT_REDIRECT_URL = '/'
 # Other settings above
 
 # Configure Django App for Heroku.
-import django_heroku
 django_heroku.settings(locals())
