@@ -84,6 +84,7 @@
         </ul>
         <ul class="right hide-on-med-and-down">
             {% if user.is_authenticated %}
+            <li><a href="{% url 'recipe_create' %}">Add a Recipe</a></li>
             <li><a href="/recipes/">My Cookbook</a></li>
             <li><a href="/profile/">Profile</a></li>
             <li><a href="/accounts/logout/">Log Out</a></li>
