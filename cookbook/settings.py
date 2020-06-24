@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cookbook.wsgi.application'
+WSGI_APPLICATION = 'cooking-with-bam.wsgi.application'
 
 
 # Database
@@ -123,3 +123,9 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/recipes/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+# Other settings above
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())

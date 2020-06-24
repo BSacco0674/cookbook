@@ -1,0 +1,1 @@
+web: gunicorn cooking-with-bam.wsgi
