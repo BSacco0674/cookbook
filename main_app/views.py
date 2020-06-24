@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from .models import Recipe, Review
+from .forms import ReviewForm, ModificationForm
 
 # Create your views here.
 def home(request):
@@ -15,7 +16,17 @@ def recipes_index(request):
 
 def recipe_detail(request, recipe_id):
     recipe = Recipe.objects.get(id=recipe_id)
-    return render(request, 'recipes/detail.html', { 'recipe': recipe })
+    items = recipe.ingredients.split(',')
+    steps = recipe.instructions.split('.')
+    steps.pop()
+    review_form = ReviewForm()
+    modification_form = ModificationForm()
+    return render(request, 'recipes/detail.html', { 
+        'recipe': recipe, 
+        'items': items, 
+        'steps': steps, 
+        'review_form': review_form, 
+        'modification_form': modification_form })
 
 def search_results(request):
     return render(request, 'results.html')
@@ -49,3 +60,19 @@ class RecipeUpdate(UpdateView):
 class RecipeDelete(DeleteView):
   model = Recipe
   success_url = '/recipes/'
+
+def add_review(request, recipe_id):
+  form = ReviewForm(request.POST)
+  if form.is_valid():
+    new_review = form.save(commit=False)
+    new_review.recipe_id = recipe_id
+    new_review.save()
+  return redirect('detail', recipe_id=recipe_id)
+
+def add_modification(request, recipe_id):
+  form = ModificationForm(request.POST)
+  if form.is_valid():
+    new_modification = form.save(commit=False)
+    new_modification.recipe_id = recipe_id
+    new_modification.save()
+  return redirect('detail', recipe_id=recipe_id)

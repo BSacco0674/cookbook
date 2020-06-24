@@ -18,7 +18,7 @@ class Review(models.Model):
     rating = models.IntegerField()
     comment = models.TextField(max_length=250)
 
-    review = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.comment}"
@@ -26,7 +26,7 @@ class Review(models.Model):
 class Modification(models.Model):
     content = models.TextField(max_length=250)
 
-    modification = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.content}"
