@@ -49,7 +49,7 @@ def signup(request):
 
 class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
-  fields = '__all__'
+  fields = ['name', 'ingredients', 'instructions']
 
 
 class RecipeUpdate(LoginRequiredMixin, UpdateView):
