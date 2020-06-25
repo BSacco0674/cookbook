@@ -26,7 +26,7 @@ SECRET_KEY = '@$gy&%9hh_w_pg_alh(6kro-jb-yq-d##dd4#3m9))k&t3&b!g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["cooking-with-bam.herokuapp.com"]
 
 
 # Application definition
