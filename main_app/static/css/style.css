@@ -13,6 +13,14 @@ body {
     
   }
 
+  hr {
+    border: 1px solid turquoise;
+  }
+
+  h6 {
+    color: white;
+  }
+
 .section-search input {
     padding: 5px !important;
     font-size: 18px !important;
@@ -20,7 +28,13 @@ body {
     border: #f4f4f4 3px solid !important;
   }
 
+.ingredients p {
+  color: white;
+}
 
+.directions li {
+  color: white;
+}
 
 .home-bg {
     background: url(https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
