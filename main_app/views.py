@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
-from .models import Recipe, Review
+from .models import Recipe, Review, User
 from .forms import ReviewForm, ModificationForm
 
 # Create your views here.
@@ -31,9 +33,6 @@ def recipe_detail(request, recipe_id):
 def search_results(request):
     return render(request, 'results.html')
 
-def profile(request):
-    return render(request, 'profile.html')
-
 def signup(request):
     error_message = ''
     if request.method == 'POST':
@@ -48,19 +47,21 @@ def signup(request):
     context = {'form': form, 'error_message': error_message }
     return render(request, 'registration/signup.html', context)
 
-
-class RecipeCreate(CreateView):
+class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
   fields = '__all__'
 
-class RecipeUpdate(UpdateView):
+
+class RecipeUpdate(LoginRequiredMixin, UpdateView):
   model = Recipe
   fields = '__all__'
 
-class RecipeDelete(DeleteView):
+
+class RecipeDelete(LoginRequiredMixin, DeleteView):
   model = Recipe
   success_url = '/recipes/'
 
+# @login_required
 def add_review(request, recipe_id):
   form = ReviewForm(request.POST)
   if form.is_valid():
@@ -69,6 +70,7 @@ def add_review(request, recipe_id):
     new_review.save()
   return redirect('detail', recipe_id=recipe_id)
 
+# @login_required
 def add_modification(request, recipe_id):
   form = ModificationForm(request.POST)
   if form.is_valid():
