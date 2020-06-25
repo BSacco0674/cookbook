@@ -2,19 +2,22 @@
 
 {% block content %}
 
+
+<html class="detail-recipe-bg">
+
 <h1>{{ recipe.name }}</h1>
 
 <div class="card">
-  <div class="card-content">
+  <div class="card-content grey darken-3">
     <div class="row">
       <div class="col s4">
-        <h6><strong>Ingredients:</strong></h6>
+        <h6 style="color:white" ><strong>Ingredients:</strong></h6>
         {% for item in items %}
           <p>{{ item }}</p>
         {% endfor %}
       </div>
       <div class="col s4">
-        <h6><strong>Directions:</strong></h6>
+        <h6 style="color:white" ><strong>Directions:</strong></h6>
         <ol>
           {% for step in steps %}
             <li>{{ step }}.</li>
@@ -22,7 +25,7 @@
       </ol>
       </div>
       <div class="col s4">
-        <h6>Add Review:</h6>
+        <h6 style="color:white" >Add Review:</h6>
         <form action="{% url 'add_review' recipe.id %}" method="post">
           {% csrf_token %}
           {{ review_form.as_p }}
@@ -47,7 +50,7 @@
 </div>
 <div class="row">
   <div class="col s6">
-    <h5>Reviews:</h5>
+    <h5 style="color:white" >Reviews:</h5>
     <div class="card">
       <div class="card-content">
         {% for review in recipe.review_set.all %}
@@ -57,7 +60,7 @@
     </div>
   </div>
   <div class="col s6">
-    <h5>Modifications:</h5>
+    <h5 style="color:white" >Modifications:</h5>
     <div class="card">
       <div class="card-content">
         {% for modification in recipe.modification_set.all %}
