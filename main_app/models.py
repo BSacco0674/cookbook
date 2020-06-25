@@ -2,20 +2,33 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+RATINGS = (
+    ('1', '⭐️'),
+    ('2', '⭐️⭐️'),
+    ('3', '⭐️⭐️⭐️'),
+    ('4', '⭐️⭐️⭐️⭐️'),
+    ('5', '⭐️⭐️⭐️⭐️⭐️')
+)
+
 class Recipe(models.Model):
-    name = models.CharField(max_length=100)
-    ingredients = models.TextField(max_length=250)
-    instructions = models.TextField(max_length=900)
+    name = models.CharField('Recipe Name:', max_length=100)
+    ingredients = models.TextField('Ingredients: (comma seperate items)', max_length=250)
+    instructions = models.TextField('Directions: (write complete sentences)', max_length=900)
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
     
-  # Add this method
     def get_absolute_url(self):
         return reverse('detail', kwargs={'recipe_id': self.id})
 
 class Review(models.Model):
-    rating = models.IntegerField()
+    rating = models.CharField(
+        max_length=1,
+        choices=RATINGS,
+        default=RATINGS[0][0]
+    )
     comment = models.TextField(max_length=250)
 
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
@@ -30,3 +43,5 @@ class Modification(models.Model):
 
     def __str__(self):
         return f"{self.content}"
+
+    

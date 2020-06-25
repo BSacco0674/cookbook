@@ -81,12 +81,14 @@
           </a>
           </li>
           <li><a href="/" class="brand-logo">&nbsp;&nbsp;Cooking with BAM</a></li>
+          
         </ul>
+        
         <ul class="right hide-on-med-and-down">
             {% if user.is_authenticated %}
+            <li> {{ user }} </li>
             <li><a href="{% url 'recipe_create' %}">Add a Recipe</a></li>
             <li><a href="/recipes/">My Cookbook</a></li>
-            <li><a href="/profile/">Profile</a></li>
             <li><a href="/accounts/logout/">Log Out</a></li>
             {% else %}
             <li><a href="/accounts/signup/">Sign Up</a></li>
@@ -100,7 +102,6 @@
 <ul class="sidenav" id="mobile-nav">
              {% if user.is_authenticated %}
             <li><a href="/recipes/">My Cookbook</a></li>
-            <li><a href="/profile/">Profile</a></li>
             <li><a href="/accounts/logout/">Log Out</a></li>
             {% else %}
             <li><a href="/accounts/signup/">Sign Up</a></li>
