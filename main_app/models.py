@@ -12,7 +12,7 @@ RATINGS = (
 
 class Recipe(models.Model):
     name = models.CharField('Recipe Name:', max_length=100)
-    ingredients = models.TextField('Ingredients: (comma seperate items)', max_length=250)
+    ingredients = models.TextField('Ingredients: (comma separate items', max_length=250)
     instructions = models.TextField('Directions: (write complete sentences)', max_length=900)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -47,9 +47,19 @@ def signup(request):
     context = {'form': form, 'error_message': error_message }
     return render(request, 'registration/signup.html', context)
 
+# class RecipeCreate(CreateView):
+#   model = Recipe
+#   fields = '__all__'
+
 class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
-  fields = '__all__'
+  fields = ['name', 'ingredients', 'instructions']
+
+  def form_valid(self, form):
+    # Assign the logged in user
+    form.instance.user = self.request.user
+    # Let the CreateView do its job as usual
+    return super().form_valid(form)
 
 
 class RecipeUpdate(LoginRequiredMixin, UpdateView):
