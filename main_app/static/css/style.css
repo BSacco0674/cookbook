@@ -1,32 +1,32 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1 0 auto;
-  }
-  
-  footer.page-footer {
-    padding-top: 0;
-    
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  hr {
-    border: 1px solid turquoise;
-  }
+main {
+  flex: 1 0 auto;
+}
 
-  h6 {
-    color: white;
-  }
+footer.page-footer {
+  padding-top: 0;
+
+}
+
+hr {
+  border: 1px solid turquoise;
+}
+
+h6 {
+  color: white;
+}
 
 .section-search input {
-    padding: 5px !important;
-    font-size: 18px !important;
-    width: 50% center !important;
-    border: #f4f4f4 3px solid !important;
-  }
+  padding: 5px !important;
+  font-size: 18px !important;
+  width: 50% center !important;
+  border: #f4f4f4 3px solid !important;
+}
 
 .ingredients p {
   color: white;
@@ -37,25 +37,28 @@ body {
 }
 
 .home-bg {
-    background: url(https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
-    }
+  background: url(https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+}
 
 
 .profile-bg {
-    background: url(https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
-    
-  }
+  background: url(https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+
+}
 
 
 .index-bg {
   background: url(https://images.pexels.com/photos/952478/pexels-photo-952478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
-  }
+}
 
 
 .detail-recipe-bg {
-    background: url(https://images.pexels.com/photos/952478/pexels-photo-952478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
-    }
-  
+  background: url(https://images.pexels.com/photos/952478/pexels-photo-952478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+}
 
 
 
+
+.slider-headline {
+  margin-top: 40%;
+}
