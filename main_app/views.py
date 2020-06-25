@@ -40,7 +40,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('index')
+            return redirect('recipes_index')
         else :
             error_message = 'Invalid sign-up, please try again.'
     form = UserCreationForm()
@@ -49,7 +49,7 @@ def signup(request):
 
 class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
-  fields = ['name', 'ingredients', 'instructions']
+  fields = '__all__'
 
 
 class RecipeUpdate(LoginRequiredMixin, UpdateView):
