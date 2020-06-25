@@ -4,7 +4,7 @@
 
 <html class="index-bg">
 
-
+{% comment %} 
 <div class="slider">
     <ul class="slides">
       <li>
@@ -24,7 +24,7 @@
     
       </li>
     </ul>
-  </div>
+  </div> {% endcomment %}
 
 
 
@@ -34,18 +34,29 @@
 
 
 
+
+
+
+{% comment %} {% for recipe in recipes %}
+  <div class="row">
+    <a href="{% url 'detail' recipe.id %}">
+        <div class="card-content grey darken-3 ">
+        <span class="card-title">{{ recipe.name }}</span>
+        </div>
+    </a>
+  </div> {% endcomment %}
 
 
 
 {% for recipe in recipes %}
-  <div class="card">
+  <div class="row">
     <a href="{% url 'detail' recipe.id %}">
-        <div class="card-content #b2ebf2 cyan lighten-4">
+        <div class="col s2 m4">
+        <div class="card-panel grey darken-3">
         <span class="card-title">{{ recipe.name }}</span>
         </div>
     </a>
   </div>
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
@@ -57,7 +68,7 @@ var options = {
   left: '10px', // default: 'unset'
   time: '0.5s', // default: '0.3s'
   mixColor: '#fff', // default: '#fff'
-  backgroundColor: "#fff url('https://images.pexels.com/photos/1415734/pexels-photo-1415734.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') ",  // default: '#fff'
+  backgroundColor: "#fff url('https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') ",  // default: '#fff'
   buttonColorDark: '#100f2c',  // default: '#100f2c'
   buttonColorLight: "#fff", // default: '#fff'
   saveInCookies: false, // default: true,
