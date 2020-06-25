@@ -10,10 +10,10 @@ body {
   
   footer.page-footer {
     padding-top: 0;
-    text-align: right;
+    
   }
 
-  .section-search input {
+.section-search input {
     padding: 5px !important;
     font-size: 18px !important;
     width: 50% center !important;
@@ -22,18 +22,29 @@ body {
 
 
 
-  .home-bg {
+.home-bg {
     background: url(https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
     }
 
 
-  .profile-bg {
+.profile-bg {
     background: url(https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
     
-
-
   }
 
 
+.index-bg {
+  background: url(https://images.pexels.com/photos/952478/pexels-photo-952478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+  }
+
+
+.detail-recipe-bg {
+    background: url(https://images.pexels.com/photos/952478/pexels-photo-952478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+    }
+  
+
+.delete-bg {
+   background: url(https://images.pexels.com/photos/952356/pexels-photo-952356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+    }
 
 

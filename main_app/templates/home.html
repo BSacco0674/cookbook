@@ -9,31 +9,31 @@
 <div class="slider">
     <ul class="slides">
       <li>
-        <img src="https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" > <!-- random image -->
+        <img src="https://images.pexels.com/photos/1407857/pexels-photo-1407857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" > <!-- random image -->
         <div class="caption center-align">
           <h3>Welcome to BAM!</h3>
           <h5 class="light grey-text text-lighten-3">A family cookbook over a 100 recipes</h5>
         </div>
       </li>
       <li>
-        <img src="https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <!-- random image -->
+        <img src="https://files.slack.com/files-pri/T0351JZQ0-F016CNZMZ9P/cooking_1920x1080-lead.jpg"> <!-- random image -->
         <div class="caption left-align">
-          <h3>Try our best recipes!</h3>
-          <h5 class="light grey-text text-lighten-3"> Search for recipes below.</h5>
+          <h3 style="color:black" position="bottom">Try our best recipes!</h3>
+          <h5 style="color:black" class="light black-text text-lighten-1"> Search for recipes below.</h5>
         </div>
       </li>
       <li>
-        <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Stay Healthy</h3>
-          <h5 class="light white-text text-lighten-1">Eat Healthy and enjoy the food!</h5>
+        <img src="https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> <!-- random image -->
+        <div class="caption right-align ">
+          <h3 style="color:black" position="bottom">Stay Healthy</h3>
+          <h5 style="color:black" class="light black-text text-lighten-1">Eat Healthy and enjoy the food!</h5>
         </div>
       </li>
       <li>
-        <img src="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>Feel like a chef with</h3>
-          <h5 class="light grey-text text-lighten-3">BAM!</h5>
+        <img src="https://media.giphy.com/media/2xPS9bJpkDXWvgcW4L/giphy.gif"> <!-- random image -->
+        <div class="caption bottom-align">
+          <h3 style="color:black" position="bottom" >Feel like a chef with</h3>
+          <h2 style="color:black" position="bottom">  BAM!</h2>
         </div>
       </li>
     </ul>
@@ -69,12 +69,11 @@ center scrollspy">
           <div class="card">
             <div class="card-image">
               <img src="https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Image" height="150" width="42">
-              <span class="card-title">Roasted Chicken</span>
+              <span class="card-title"></span>
             </div>
-            <div class="card-content">
-              {% comment %} <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas aliquid fugiat corporis laudantium, architecto
-                delectus?
-              </p> {% endcomment %}
+            <div class="card-content" "text-align:center" >
+              <h6>Roasted Chicken
+              </h6>
             </div>
           </div>
         </div>
@@ -82,12 +81,11 @@ center scrollspy">
           <div class="card">
             <div class="card-image">
               <img src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Image" height="150" width="42">
-              <span class="card-title">Egg Benedict</span>
+              <span class="card-title"></span>
             </div>
-            <div class="card-content">
-              {% comment %} <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas aliquid fugiat corporis laudantium, architecto
-                delectus?
-              </p> {% endcomment %}
+            <div class="card-content" "text-align:center">
+             <h6>Egg Benedicts
+              </h6>
             </div>
           </div>
         </div>
@@ -95,12 +93,11 @@ center scrollspy">
           <div class="card">
             <div class="card-image">
               <img src="https://images.pexels.com/photos/674578/pexels-photo-674578.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Image" height="150" width="42">
-              <span class="card-title">Turkey Tacos</span>
+              <span class="card-title"></span>
             </div>
-            <div class="card-content">
-              {% comment %} <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas aliquid fugiat corporis laudantium, architecto
-                delectus?
-              </p> {% endcomment %}
+            <div class="card-content" "text-align:center">
+              <h6>Turkey Tacos 
+              </h6>
             </div>
           </div>
         </div>
@@ -113,7 +110,7 @@ center scrollspy">
 
 
   {% comment %} follow us info {% endcomment %}
-<section class="section section-follow grey darken-2 white-text center">
+{% comment %} <section class="section section-follow grey darken-2 white-text center">
 	<div class="container">
 		<div class="row">
 			<div class="col s12">
@@ -127,5 +124,6 @@ center scrollspy">
 			</div>
 		</div>
 	</div>
-</section>
+  </div>
+</section> {% endcomment %}
 {% endblock %}

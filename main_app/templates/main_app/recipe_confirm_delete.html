@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Delete Recipe</h1>
+
+<html class="delete-bg">
+
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://media1.giphy.com/media/SVHVfHH7CvuneydXdB/giphy.gif?cid=ecf05e476fdab65d073f10d31e7e7ef91dc9f73824b7e7b0&rid=giphy.gif" > <!-- random image -->
+        <div class="caption center-align">
+         <h1>Delete Recipe</h1>
 
   <h4>Are you sure you want to delete {{ recipe.name }}?</h4>
 
@@ -10,4 +18,10 @@
     <input type="submit" value="Delete" class="btn">
     <a class="btn" href="{% url 'detail' recipe.id %}">Cancel</a>
   </form>
+        </div>
+      </li>
+      </div>
+  
 {% endblock %}
+
+
