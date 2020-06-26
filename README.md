@@ -33,13 +33,13 @@
 ### ***Screenshots***
 
 ###### Landing Page
-![About Page]()
+![About Page](https://i.imgur.com/ocEYyU3.png)
 
 ###### Add A Recipe
-![Add A Recipe](https://i.imgur.com/ocEYyU3.png)
+![Add A Recipe](https://i.imgur.com/hcnSWso.png)
 
 ###### My Cookbook
-![My Cookbook]()
+![My Cookbook](https://i.imgur.com/tmGbVoK.png)
 ***
 
 ### ***Credits***
@@ -51,7 +51,7 @@
 -  [X] Allow users to toggle between light and dark mode
 - [ ] Allow users to search through a large database of recipes via external API
 - [ ] Make app completely scalable for mobile
-- [X] Allow the user to rate games in their collections
+- [X] Allow the user to rate recipes in their collections
 - [ ] Allow users to apply category tags to their collections
 ***
 
