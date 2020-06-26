@@ -1,4 +1,4 @@
-![Cooking-with-Bam!](https://i.imgur.com/4Isovd4.png)
+![Cooking-with-Bam!](https://i.imgur.com/xRH3692.png)
 
 ### Date: 6.26.2020
 
