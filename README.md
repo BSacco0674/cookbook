@@ -44,6 +44,7 @@
 
 ### ***Credits***
 ##### CSS Styling: [Materialize](https://materializecss.com/)
+##### Adding Community page: [List Comprehension](https://realpython.com/list-comprehension-python/)
 ***
 
 ### ***Future Updates***
