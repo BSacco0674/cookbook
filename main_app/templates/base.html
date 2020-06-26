@@ -88,7 +88,8 @@
             {% if user.is_authenticated %}
             <li>Welcome Chef {{ user }} </li>
             <li><a href="{% url 'recipe_create' %}">Add a Recipe</a></li>
-            <li><a href="/recipes/">My Cookbook</a></li>
+            <li><a href="/recipes/">Community Cookbook</a></li>
+            <li><a href="/recipes/my">My Cookbook</a></li>
             <li><a href="/accounts/logout/">Log Out</a></li>
             {% else %}
             <li><a href="/accounts/signup/">Sign Up</a></li>
